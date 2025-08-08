@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Shopping Website</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1> 🛍 ShopEasy</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Categories</a></li>
+      <li><a href="cart.html">🛒 Cart</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav><br>
+
+  <!-- Slideshow -->
+   <!-- Slideshow Section -->
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="image/img 1.webp"  alt="Slide 1">
+  </div>
+  <div class="slide fade">
+    <img src="image/img 2.webp" alt="Slide 2">
+  </div>
+  <div class="slide fade">
+    <img src="image/img 3.webp" alt="Slide 3">
+  </div>
+  <div class="slide fade">
+    <img src="image/img4.webp" alt="Slide 4">
+  </div>
+  <div class="slide fade">
+    <img src="image/img 5.webp" alt="Slide 5">
+  </div>
+</div>
+
+
+  <!-- Gridbox: Categories -->
+  <div class="gridbox">
+    <div class="category">Electronics</div>
+    <div class="category">Fashion</div>
+    <div class="category">Home & Living</div>
+    <div class="category">Books</div>
+    <div class="category">Sports</div>
+  </div>
+
+  <!-- Product Cards -->
+  <section class="product-section">
+    <h2 style="padding-left:2rem; margin-bottom:1rem;"></h2>
+    <div class="cards">
+      <div class="card">
+        <img src="image/sky 1.webp"  alt="Product 1">
+        </div>
+      <div class="card">
+        <img src="image/sky 2.webp" alt="Product 2">
+      </div>
+      <div class="card">
+        <img src="image/sky3.webp" alt="Product 3">
+      </div>
+      <div class="card">
+        <img src="image/sky 4.webp" alt="Product 3">
+      </div>
+       <div class="card">
+        <img src="image/sky 5.webp" alt="Product 3">
+      </div>
+       <div class="card">
+        <img src="image/sky 6.webp" alt="Product 3">
+      </div>
+       <div class="card">
+        <img src="image/sky 7.webp" alt="Product 3">
+      </div>
+       <div class="card">
+        <img src="image/sky 8.webp" alt="Product 3">
+      </div>
+       <div class="card">
+        <img src="image/sky 9.webp" alt="Product 3">
+      </div>
+    </div>
+  </section> 
+
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      background-color: white;
+      padding: 20px;
+    }
+
+    .grid-item {
+      background-color: whitesmoke;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 300px;
+      max-width: 300px;
+    }
+
+    .price {
+      color: darkgreen;
+      text-align: left;
+      margin: 10px 0;
+    }
+
+    .discount {
+      color: darkgreen;
+      font-weight: bold;
+    }
+
+    .grid-item button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: darkgreen;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .grid-item button:hover {
+      background-color: green;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 992px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1><b>Our products</b></h1>
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="image/d1.webp" alt="Watch">
+      <p>Analog Watch - For Men<br> Chronograph; Full Stainless Steel.<br>30M Water Resistant Luxury</p>
+      <p class="price">Special price</p>
+      <p>₹3,033 <del>₹3,590</del> <span class="discount">15% off</span></p>
+       <a href="cart.html"><button>Add to Cart</button></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="image/d4.webp" alt="Shoes">
+      <p>Red Tape Casual Sneaker Shoes for Men<br> Casuals For Men (White, Grey , 6)</p>
+      <p class="price">Special price</p>
+      <p>₹1,319 <del>₹2,999</del> <span class="discount">80% off</span></p>
+       <a href="cart.html"><button>Add to Cart</button></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="image/d5.webp" alt="LED Watch">
+      <p>LED Display Digital Watch - For Boys & Girls<br> KIMY Fashionable LED Wristwatch</p>
+      <p class="price">Special price</p>
+      <p>₹181 <del>₹1,969</del> <span class="discount">90% off</span></p>
+       <a href="cart.html"><button>Add to Cart</button></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="image/d7.webp" alt="T-Shirt">
+      <p>Men Striped Polo Neck Cotton<br>Blend Green T-Shirt</p>
+      <p class="price">Special price</p>
+      <p>₹348 <del>₹1,299</del> <span class="discount">73% off</span></p>
+       <a href="cart.html"><button>Add to Cart</button></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="image/r1.webp" alt="Saree">
+      <p>Embellished Bollywood Chiffon Saree (Green)</p>
+      <p class="price">Special price</p>
+      <p>₹400 <del>₹1,999</del> <span class="discount">79% off</span></p>
+       <a href="cart.html"><button>Add to Cart</button></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="image/d9.webp" alt="Earrings">
+      <p>Korean Party Wear Earrings for Women & Girls<br> Cubic Zirconia Alloy Cuff Earring</p>
+      <p class="price">Special price</p>
+      <p>₹139 <del>₹1,999</del> <span class="discount">93% off</span></p>
+       <a href="cart.html"><button>Add to Cart</button></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="image/d11.webp" alt="Teddy Bear">
+      <p>Plushie 4 Feet Very Cute Long Soft Teddy Bear<br> Best For Gift - 4 FOOT CREAM</p>
+      <p class="price">Special price</p>
+      <p>₹403 <del>₹1,499</del> <span class="discount">73% off</span></p>
+       <a href="cart.html"><button>Add to Cart</button></a>
+    </div>
+
+    <div class="grid-item">
+      <img src="image/d12.webp" alt="Mosquito Net">
+      <p>Leaf Printed King Size Machardani<br> Mosquito Net (Red, Tent)</p>
+      <p class="price">Special price</p>
+      <p>₹900 <del>₹2,000</del> <span class="discount">55% off</span></p>
+       <a href="cart.html"><button>Add to Cart</button></a>
+    </div>
+  </div>
+
+
+
+  <!-- HTML -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>Your one-stop shop for the latest trends in fashion, electronics, and more.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: swatipatil9162004@gmail.com</p>
+      <p>Phone: 8080169130</p>
+      <p>Address: at post boris dist dhule</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="image/facebook (1).svg" alt="Facebook"></a>
+        <a href="#"><img src="image/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="image/twitter (1).svg" alt="Twitter"></a>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 ShopOnline. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+     <script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+  }
+</script>
+
+
+</body>
+</html>

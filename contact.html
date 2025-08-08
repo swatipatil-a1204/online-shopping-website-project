@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Navbar -->
+  <nav class="navbar">
+    <h1> 🛍 ShopEasy</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Categories</a></li>
+      <li><a href="cart.html"><h2>🛒 Cart</h2></a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav><br>
+
+  
+
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Shopping Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 550px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .confirmation {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 4px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Order Form</h2>
+  <form id="orderForm">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" required>
+
+    <label for="address">Address:</label>
+    <textarea id="address" rows="3" required></textarea>
+
+    <label for="date">Order Date:</label>
+    <input type="date" id="date" required>
+
+    <label for="product">Select Product:</label>
+    <select id="product" required>
+      <option value="">-- Choose Product --</option>
+      <option value="T-shirt">T-shirt ($15)</option>
+      <option value="Jeans">Jeans ($40)</option>
+      <option value="Shoes">Shoes ($60)</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" min="1" required>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+  <div class="confirmation" id="confirmationMessage"></div>
+</div>
+
+<script>
+  const productPrices = {
+    "T-shirt": 15,
+    "Jeans": 40,
+    "Shoes": 60
+  };
+
+  document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const date = document.getElementById('date').value;
+    const product = document.getElementById('product').value;
+    const quantity = parseInt(document.getElementById('quantity').value);
+
+    if (!name || !email || !address || !date || !product || !quantity) {
+      alert("Please fill all the fields.");
+      return;
+    }
+
+    const pricePerUnit = productPrices[product];
+    const totalPrice = pricePerUnit * quantity;
+
+    const message = `
+      <strong>Order Confirmation</strong><br><br>
+      Name: ${name}<br>
+      Email: ${email}<br>
+      Address: ${address}<br>
+      Order Date: ${date}<br>
+      Product: ${product}<br>
+      Quantity: ${quantity}<br>
+      Price per Unit: $${pricePerUnit.toFixed(2)}<br>
+      <strong>Total Price: $${totalPrice.toFixed(2)}</strong><br><br>
+      Thank you for your order!
+    `;
+
+    const confirmationDiv = document.getElementById('confirmationMessage');
+    confirmationDiv.innerHTML = message;
+    confirmationDiv.style.display = 'block';
+
+    document.getElementById('orderForm').reset();
+  });
+</script>
+
+</body>
+</html>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>Your one-stop shop for the latest trends in fashion, electronics, and more.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Categories</a></li>
+      <li><a href="cart.html">Deal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: swatipatil9162004@gmail.com</p>
+      <p>Phone: 8080169130</p>
+      <p>Address: at post boris dist dhule</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="image/facebook (1).svg" alt="Facebook"></a>
+        <a href="#"><img src="image/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="image/twitter (1).svg" alt="Twitter"></a>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 ShopOnline. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+   
+
+
+
+</body>
+</html>
+
+
+
+
+   <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>Your one-stop shop for the latest trends in fashion, electronics, and more.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: swatipatil9162004@gmail.com</p>
+      <p>Phone: 8080169130</p>
+      <p>Address: at post boris dist dhule</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="image/facebook (1).svg" alt="Facebook"></a>
+        <a href="#"><img src="image/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="image/twitter (1).svg" alt="Twitter"></a>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 ShopOnline. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+   
+
+</body>
+</html>
+
+</body>
+</html>

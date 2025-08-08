@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Grid</title>
+  <link rel="stylesheet" href="style.css">
+   <!-- Navbar -->
+  <nav class="navbar">
+    <h1> 🛍 ShopEasy</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Categories</a></li>
+      <li><a href="cart.html">🛒 Cart</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav><br>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-name {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .product-price {
+      color: #27ae60;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .add-to-cart {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .add-to-cart:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+
+
+  <div class="grid-container">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/m2.webp" alt="Product 1">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Men Regular Fit Solid Spread Collar Casual Shirt</div>
+        <div class="product-price">₹290</div>
+        <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/m3.webp" alt="Product 2">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Men Regular Fit Self Design Spread Collar Casual Shirt</div>
+        <div class="product-price">₹328</div>
+        <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/m4.webp" alt="Product 3">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Men Slim Fit Solid Spread Collar Casual Shirt</div>
+        <div class="product-price">₹299</div>
+         <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/m5.webp" alt="Product 4">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Men Regular Fit Checkered Casual Shirt</div>
+        <div class="product-price">₹255</div>
+         <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/m6.webp" alt="Product 5">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Men Regular Fit Solid Spread Collar Casual Shir</div>
+        <div class="product-price">₹394</div>
+       <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/w1.webp" alt="Product 6">
+      </div>
+      <div class="product-info">
+        <div class="product-name">EVR-001 Analog Watch - For Women drw-1</div>
+        <div class="product-price">₹310</div>
+         <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/t1.webp" alt="Product 7">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Fastrack <br>
+Trendies Analog Watch - For Women 68007PP01</div>
+        <div class="product-price">₹399</div>
+         <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/t2.webp" alt="Product 8">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Premium Color Smooth Finish Combo Pack 2 Analog Watch</div>
+        <div class="product-price">₹370</div>
+         <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/g1.webp" alt="Product 9">
+      </div>
+      <div class="product-info">
+        <div class="product-name">UV Protection Butterfly, Cat-eye Sunglasses (Free Size)  (For Women, Pink)t</div>
+        <div class="product-price">₹339</div>
+         <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+     <div class="product-card">
+      <div class="product-image">
+        <img src="image/g2.webp" alt="Product 9">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Gradient, UV Protection Rectangular Sunglasses</div>
+        <div class="product-price">₹279</div>
+         <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+     <!-- Product 5 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/s1.webp" alt="Product 5">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Formal Pu Leather Loafer & Mocassins Shoe Jutis For Men</div>
+        <div class="product-price">₹497</div>
+         <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/p1.webp" alt="Product 6">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Adilqadri The Story Perfume | French Scent | Long Lasting</div>
+        <div class="product-price">₹398</div>
+         <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/s2.webp" alt="Product 7">
+      </div>
+      <div class="product-info">
+        <div class="product-name">DOVE Intense Repair Nourishing Shampoo  (1000 ml)</div>
+        <div class="product-price">₹503</div>
+       <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/k1.webp" alt="Product 8">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Vaseline Deep Moisturizer  (725 ml)</div>
+        <div class="product-price">₹507</div>
+        <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+
+    <!-- Product 9 -->
+    <div class="product-card">
+      <div class="product-image">
+        <img src="image/k2.webp" width="100%" height="300" alt="Product 9">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Lakmé Sunscreen - SPF 50 PA+++ Sun Expert Ultra Matte Lotion Sunscreen </div>
+        <div class="product-price">₹164</div>
+         <a href="cart.html"><button class="add-to-cart">Add to Cart</button></a>
+      </div>
+    </div>
+  </div><br>
+
+
+  <!-- HTML -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>Your one-stop shop for the latest trends in fashion, electronics, and more.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Categories</a></li>
+      <li><a href="cart.html">Deal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: swatipatil9162004@gmail.com</p>
+      <p>Phone: 8080169130</p>
+      <p>Address: at post boris dist dhule</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="image/facebook (1).svg" alt="Facebook"></a>
+        <a href="#"><img src="image/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="image/twitter (1).svg" alt="Twitter"></a>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 ShopOnline. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+   
+
+</body>
+</html>

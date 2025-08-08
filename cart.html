@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart Example</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   <!-- Navbar -->
+  <nav class="navbar">
+    <h1> 🛍 ShopEasy</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Categories</a></li>
+      <li><a href="cart.html">🛒 Cart</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav><br>
+  
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .product {
+    width: 320px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  button {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .order-confirm {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+</style>
+
+<h1>Online Shopping</h1>
+
+<div class="product-grid">
+  <div class="product">
+    <img src="image/m2.webp" alt="Product 1">
+    <h4 style="color: rgb(148, 142, 142);">DHADUK</h4>
+    <h3>Men Regular Fit Solid Spread Collar Casual Shirt</h3>
+    <span style="color: darkgreen;">Special price</span>
+    <p>Price: ₹344 &nbsp;<del>₹1,199</del>&nbsp;80% off</p>
+    <button onclick="orderNow('Product 1')">Order Now</button>
+    <div id="order-message-1" class="order-confirm"></div>
+  </div>
+
+  <div class="product">
+    <img src="image/m3.webp" alt="Product 2">
+    <h4 style="color: rgb(148, 142, 142);">JACKBELLA</h4>
+    <h3>Men Regular Fit Self Design Spread Collar Casual Shirt</h3>
+    <span style="color: darkgreen;">Special price</span>
+    <p>Price: ₹339&nbsp;<del>₹1,499</del>&nbsp;68% off</p>
+    <button onclick="orderNow('Product 2')">Order Now</button>
+    <div id="order-message-2" class="order-confirm"></div>
+  </div>
+</div>
+
+<script>
+  function orderNow(productName) {
+    alert("Thank you! Your order for " + productName + " has been placed.");
+    if (productName === "Product 1") {
+      document.getElementById("order-message-1").innerText = "Order placed successfully!";
+    } else if (productName === "Product 2") {
+      document.getElementById("order-message-2").innerText = "Order placed successfully!";
+    }
+  }
+</script><br><br>
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>Your one-stop shop for the latest trends in fashion, electronics, and more.</p>
+
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: swatipatil9162004@gmail.com</p>
+      <p>Phone: 8080169130</p>
+      <p>Address: at post boris dist dhule</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="image/facebook (1).svg" alt="Facebook"></a>
+        <a href="#"><img src="image/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="image/twitter (1).svg" alt="Twitter"></a>
+      </div>
+      <form class="newsletter">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 ShopOnline. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
